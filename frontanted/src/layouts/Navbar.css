@@ -1,0 +1,80 @@
+/* Basic Styling */
+
+nav {
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Stick to the top */
+  left: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it stays above other content */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem; /* Added space from left and right */
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+nav img {
+  height: 40px; /* Adjust logo size */
+}
+
+nav a {
+  color: #333; /* Link color */
+  text-decoration: none; /* Remove underline */
+  margin: 0 1rem; /* Spacing between links */
+}
+
+nav a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  nav {
+    padding: 0.8rem 1.5rem; /* Adjusted padding for mobile */
+  }
+
+  nav img {
+    height: 30px; /* Adjust logo size for mobile */
+  }
+
+  nav a {
+    margin: 0 0.5rem; /* Reduce spacing on mobile */
+  }
+}
+
+/* Tablet and Laptop Responsive */
+@media (max-width: 1024px) {
+  nav {
+    padding: 1rem 2rem; /* Adjusted padding for tablet */
+  }
+
+  nav img {
+    height: 35px; /* Adjust logo size for tablets and small laptops */
+  }
+
+  nav a {
+    margin: 0 1rem; /* Standard margin for tablet and laptop */
+  }
+}
+
+/* Larger Devices - Desktop */
+@media (min-width: 1025px) {
+  nav {
+    padding: 1rem 3rem; /* Increased padding for desktop */
+  }
+
+  nav img {
+    height: 40px; /* Standard logo size for desktop */
+  }
+
+  nav a {
+    margin: 0 1.5rem; /* Standard margin for desktop */
+  }
+}

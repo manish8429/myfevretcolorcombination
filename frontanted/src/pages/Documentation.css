@@ -1,0 +1,229 @@
+Documentation Component Styles
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3a4a5f;
+  --text-color: #333;
+  --light-text: #6b7c93;
+  --white: #ffffff;
+  --off-white: #f8f9fa;
+  --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 12px 25px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 5px 20px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+.documentation-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.doc-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.doc-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.doc-subtitle {
+  font-size: 1.2rem;
+  color: var(--light-text);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.search-container {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  box-shadow: var(--shadow-sm);
+  border-radius: 50px;
+  overflow: hidden;
+  background: white;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+ 
+    /* Existing styles */
+    color: var(--color-black); /* Add this line */
+}
+
+.search-btn {
+  background: linear-gradient(90deg, #4CAF50, #0088cc);
+  color: white;
+  border: none;
+  padding: 0 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2.5rem;
+  border-radius: 1rem;
+}
+
+.search-btn:hover {
+  background: linear-gradient(90deg, #3e8e41, #006699);
+}
+
+.doc-categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.category-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  background: white;
+  color: var(--text-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.category-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-btn.active {
+  color: white;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.doc-card {
+  border-radius: var(--border-radius);
+  padding: 1.8rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.doc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.card-link {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  margin-top: auto;
+  transition: var(--transition);
+}
+
+.card-link:hover {
+  transform: translateX(5px);
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: var(--light-text);
+  font-size: 1.1rem;
+}
+
+.doc-footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid #eee;
+  color: var(--light-text);
+}
+
+.doc-footer a {
+  color: #0088cc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .documentation-section {
+    padding: 1.5rem;
+  }
+  
+  .doc-header h2 {
+    font-size: 2rem;
+  }
+  
+  .search-container {
+    flex-direction: column;
+    border-radius: var(--border-radius);
+  }
+  
+  .search-input {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: 1rem;
+  }
+  
+  .search-btn {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .doc-categories {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .doc-grid {
+    grid-template-columns: 1fr;
+  }
+} 

@@ -1,0 +1,215 @@
+/* Responsive Button */
+.button {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #272727;
+  border-radius: 9px;
+  transition: 0.5s;
+}
+
+.button:hover::before {
+  opacity: 0.7;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  border-radius: 9px;
+  transition: 0.5s;
+  opacity: 0;
+  filter: blur(20px);
+}
+
+.button:hover:after {
+  opacity: 1;
+}
+
+
+/* Hero section text container */
+.animationshow {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Main Heading */
+.texth1 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-top: 1rem;
+  color: #3259E9;
+  text-align: center;
+  max-width: 80%;
+}
+
+/* Subtext Styling */
+.hero-subtext {
+  font-size: 1.2rem;
+  color: #9CA3AF;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* Ensure the hero content scales correctly */
+@media (max-width: 1024px) {
+  .texth1 {
+    font-size: 2.8rem;
+    max-width: 85%;
+  }
+  
+  .hero-subtext {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .animationshow {
+    margin-top: 3rem;
+  }
+
+  .texth1 {
+    font-size: 2.3rem;
+    max-width: 90%;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+    max-width: 95%;
+  }
+
+  .button {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .texth1 {
+    font-size: 1.8rem;
+    max-width: 95%;
+  }
+
+  .hero-subtext {
+    font-size: 0.95rem;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+
+  /* Searching */
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 3rem;
+    /* padding-bottom: 10rem; */
+    flex-wrap: wrap; /* Ensures responsiveness */
+  }
+  
+  /* Input field */
+  .search-input {
+    width: 100%;
+    max-width: 450px;
+    height: 50px;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 30px;
+    transition: border-color 0.3s ease;
+    border: 2px solid #5A6592; /* Default border color */
+    background-color: transparent;
+  }
+  
+  /* Hover and focus effects */
+  .search-input:hover,
+  .search-input:focus {
+    border-color: #1D4ED8; /* Border color on hover */
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* Button */
+  .search-button {
+    background-color: #1D4ED8;
+    color: white;
+    padding: 13px 35px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .search-button:hover {
+    background-color: #1B3BBB;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .search-input {
+      max-width: 350px;
+    }
+    .search-button {
+      padding: 12px 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .search-container {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .search-input {
+      max-width: 90%;
+      height: 45px;
+    }
+  
+    .search-button {
+      width: 90%;
+      padding: 12px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .search-input {
+      max-width: 100%;
+    }
+  
+    .search-button {
+      width: 100%;
+    }
+  }
+  
